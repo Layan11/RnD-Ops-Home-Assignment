@@ -5,6 +5,6 @@ And from the results creates a CSV file, named 'output.csv', containing Nasa_id 
 with original file size larger than 1000 kb.
 
 In order to run the script you have to import the following packages:  
-import urllib  
-import requests  
-import csv  
+'import urllib'  
+'import requests'  
+'import csv'  
