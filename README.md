@@ -5,6 +5,7 @@ And from the results creates a CSV file, named 'output.csv', containing Nasa_id 
 with original file size larger than 1000 kb.
 
 In order to clone this repository you need to copy and paste this url:  'https://github.com/Layan11/RnD-home-test.git'  
+
 The packages you need to import to be able to run the script are the following packages:  
 'import urllib'  
 'import requests'  
