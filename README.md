@@ -11,4 +11,5 @@ The packages you need to import to be able to run the script are the following p
 'import requests'  
 'import csv'  
 
-To run the script use the 'python query.py' command.
+To run the script use the 'python query.py' command.  
+After the script finished running, it will create a csv output file named 'output.csv' which will contain all of the query's output in a table.
