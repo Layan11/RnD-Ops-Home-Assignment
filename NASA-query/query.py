@@ -23,19 +23,19 @@ def get_size_in_kb(jsondict, index):
 
     return image_size_in_kb
 
-#??????
+
+# returns a dictionary of data and metadata recieved from the get request with the given url
 def get_collection(url):
     # get request for the given url
     response = requests.get(url)
     # raise exception in case there was an error during the get request
     response.raise_for_status()
-    # ???????
     collection = response.json()['collection']
 
     return collection
 
 
-# creates a csv file with the given list of rows
+# creates a csv file with the fields nasa id and the image size in kb, from the given list of rows
 def create_csv_output(output_rows_list):
     with open('output.csv', 'w', newline='') as file:
         writer = csv.writer(file)
@@ -50,6 +50,8 @@ url = "https://images-api.nasa.gov/search?q=ilan ramon"
 collection = get_collection(url)
 output_rows_list = []
 next_page = True
+page_num = 1
+images_sum = 0
 
 # there could be multiple pages in the get response, so this while loop keeps running while there is a next page
 # to go through all the pages
@@ -62,6 +64,7 @@ while next_page:
     next_page_url = collection['links'][0]['href']
     # the 'jsondict' is a dictionary that has all the images information and metadata
     jsondict = collection['items']
+    print(f"The current page number is: {page_num}, the number of images in this page is: {len(jsondict)}")
 
     # goes over all the images in the 'jsondict'
     for i in range(len(jsondict)):
@@ -69,12 +72,13 @@ while next_page:
         image_size_in_kb = get_size_in_kb(jsondict, i)
 
         if image_size_in_kb > 1000:
+            images_sum += 1
             nasa_id = jsondict[i]['data'][0]['nasa_id']
-            output_rows_list.append([nasa_id, image_size_in_kb])
+            output_rows_list.append([nasa_id, round(image_size_in_kb)])
 
     # update the collection to the collection of the next page
     collection = get_collection(next_page_url)
+    page_num += 1
 
-# write a csv output file with the nasa id and the image size in kb for all images with file size bigger than 1000 kb
-# which we saved in the list 'output_rows_list'
 create_csv_output(output_rows_list)
+print(f"The total number of images with original file size bigger than 1000 kb is: {images_sum}")
