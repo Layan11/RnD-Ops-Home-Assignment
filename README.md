@@ -1,4 +1,4 @@
-# RnD-home-test
+# RnD-Ops-Home-Assignment
 
 This is a script in python which queries the NASA image and video library for all assets related to “Ilan Ramon”.  
 And from the results creates a CSV file, named 'output.csv', containing Nasa_id and file size in kb for all images 
