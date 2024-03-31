@@ -8,6 +8,8 @@
     - If you are using reserved instances or on-demand.
     - The number of instances that you use.
     - Change in prices, AWS offers pay-as-you-go pricing for most services and prices may change over time.
+    - There could be taxes that may be applied to your purchase of the services.
+
 
 
 (b) How can you reduce the price?
@@ -16,6 +18,11 @@
     - Chose a cheaper instance type which meets the requirements of your workload.
     - You can use reserved instances as opposed to on demand if you know you are going to use the instance for a long
     period of time, since reserved instances offer a much cheaper price. Also that way if the prices change and become more expensive, as they may change, by using the reserved instance you ensure to keep paying for the chaper price for as long as the reserved period (1 year or 3 years).
+
+
+
+
+
 
 (c) What can you look at to optimize the cost?
     - You can split the workload across multiple Regions. If there are components that are not sensitive to network
