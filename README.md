@@ -36,7 +36,8 @@ I created and launced an AWS EC2 instance as well as an RDS instance using the A
 
 Before launching the instances i went through all the different parameters for each instance and configured them myself.  
 
-Here i provide two screenshots to show the running instances, however i made a very detailed pdf file in which i explain all the steps i made to launch them as well as some explanation for the parameters i chose, some screenshots, and screen recordings.  Open this link to see the detailed file:  
+Here i provide two screenshots to show the running instances, however i made a very detailed pdf file in which i explain all the steps i made to launch them as well as some explanation for the parameters i chose, some screenshots, and screen recordings.  
+Open this link to see the detailed file:  
 '<code>[file:///C:/Users/Layan/Downloads/aws%20instances.pdf](https://drive.google.com/file/d/1YTrkPwG1nPuuDRbU-D0cDjdEjNGKa4xi/view?usp=sharing)</code>'
 
 ### <b>Screenshot of the running ec2 instance, named 'ec2-instance':</b>
