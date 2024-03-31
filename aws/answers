@@ -5,11 +5,11 @@
     - Number of vCPU and memory size.
     - The type of instance you are using, for example if you're launching an RDS, different db engines vary in prices,
     for example MYSQL costs less than Aurora engine.
-
+    - If you are using reserved instances or on-demand.
 
 
 (b) How can you reduce the price?
-    - Choose a cheaper region.
+    - Choose a cheaper region that still meets the requirements of your applications and workload.
     - Lower the number of vCPU's and memory size if your workload doesn't require that much.
     - Chose a cheaper instance type which meets the requirements of your workload.
 
