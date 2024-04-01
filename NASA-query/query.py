@@ -17,7 +17,7 @@ def get_size_in_kb(jsondict, index):
     # get the url for the image in the original size, which is in index 0 of the image_urls list
     orig_image_url = image_urls[0]
 
-    # the urlopen request returns an http response, then retrieve the content
+    # the urlopen request returns an http response, then retrieves the content
     # length from the 'Content-Length' header, which has the image file size in bytes
     content_length = urllib.request.urlopen(orig_image_url).headers.get('Content-Length')
     image_size_in_kb = int(content_length) / 1024
