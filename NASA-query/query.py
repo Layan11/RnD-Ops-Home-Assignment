@@ -73,7 +73,6 @@ if __name__ == '__main__':
     output_rows_list = []
     next_page = True
     page_num = 1
-    images_sum = 0
 
     # there could be multiple pages in the get response, so this while loop keeps running while there is a next page
     # to go through all the pages
@@ -95,7 +94,6 @@ if __name__ == '__main__':
             image_size_in_kb = get_size_in_kb(jsondict, i)
 
             if image_size_in_kb > 1000:
-                images_sum += 1
                 nasa_id = jsondict[i]['data'][0]['nasa_id']
                 output_rows_list.append([nasa_id, round(image_size_in_kb)])
 
@@ -104,4 +102,4 @@ if __name__ == '__main__':
         page_num += 1
 
     create_csv_output(output_rows_list)
-    print(f"The total number of images with original file size bigger than 1000 kb is: {images_sum}")
+    print(f"The total number of images with original file size bigger than 1000 kb is: {len(output_rows_list)}")
