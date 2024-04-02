@@ -60,7 +60,6 @@ def read_config():
     config_values = {
         'nasa_ilan_ramon_url': nasa_ilan_ramon_url,
     }
-
     return config_values
 
 
